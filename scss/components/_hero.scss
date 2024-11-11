@@ -1,0 +1,103 @@
+.hero{
+    padding-top: 3%;
+    padding-bottom: 150px;
+    .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .hero__button{
+            width: 240px;
+            height: 52px;
+            border-radius: 25px;
+            background-color: #375739;
+            border: none;
+            box-shadow:0px 10px 15px rgba(0, 0, 0, 0.3);
+            a{
+                text-decoration: none;
+                font-family: "Alexandria" , serif;
+                color: #FFFFFF;
+                font-size: 17px;
+                outline: none;
+            }
+        }
+        .hero__beautiful{
+            margin-top: 1%;
+            color: #aae5a1;
+            font-family: "Alexandria" , serif;
+            font-size: 16px;
+        }
+        .hero__p{
+            margin-top: 2%;
+            opacity: 90%;
+            text-align: center;
+            font-family: "Alexandria" , serif;
+            font-size: 19px;
+            font-weight: 500;
+            color: #000000;
+        }
+    }
+    .plants{
+        margin-top: 10%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .plants__text{
+            font-size: 65px;
+            color: #375739;
+            font-family: "Alexandria" , serif;
+            font-weight: 600;
+        }
+        .photos{
+            margin-top: 2%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+
+// Add these media queries to _hero.scss
+.hero {
+    @media screen and (max-width: 768px) {
+        padding-top: 5%;
+        padding-bottom: 50px;
+
+        .text {
+            .hero__button {
+                width: 200px;
+                height: 45px;
+
+                a {
+                    font-size: 15px;
+                }
+            }
+
+            .hero__p {
+                font-size: 16px;
+                padding: 0 20px;
+            }
+        }
+
+        .plants {
+            margin-top: 5%;
+
+            .plants__text {
+                font-size: 36px;
+                text-align: center;
+            }
+
+            .photos {
+                flex-direction: column;
+                gap: 20px;
+                
+                img {
+                    width: 90%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

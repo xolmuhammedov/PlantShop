@@ -12,36 +12,62 @@
 </head>
 
 <body>
-    <section class="home">
-        <!-- <div class="background">
-            <img class="home__image" src="./assets/home/Background.png" alt="background-image">
-        </div> -->
-        <header>
-            <div class="container">
-                <nav>
-                    <ul>
-                        <img src="./assets/home/Logo.svg" alt="logo">
-                        <li><a href="#">Service</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="#">Location</a></li>
-                        <button>Check out</button>
-                    </ul>
-                </nav>
+    <div id="root">
+        <section class="home">
+            <!-- <div class="background">
+                <img class="home__image" src="./assets/home/Background.png" alt="background-image">
+            </div> -->
+            <header>
+                <div class="container">
+                    <nav class="sidebar" id="main-nav">
+                        <ul>
+                            <a style="text-decoration: none;" href="#">
+                                <img src="./assets/home/Logo.svg" alt="logo">
+                            </a>
+                            <li><a href="/service" onclick="route(event)">Service</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Location</a></li>
+                            <button><a style="text-decoration: none; color: #000000;" href="#">Check out</a></button>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="main">
+                <h1 class="main__text">Let’s find<br>your love<br><span>plants.</span></h1>
+                <p class="main__p">Add some color to your home, give it a<br>little attention, the plants
+                    will<br>accompany you quietly</p>
+                <button class="main__watch"><a href="#">WATCH THE VIDEO</a></button>
+                <div class="main__logos">
+                    <img src="./assets/main/001-plant 1.svg" alt="flower-logo">
+                    <img src="./assets/main/001-plant 2.svg" alt="flower-logo">
+                    <img src="./assets/main/001-plant 3.svg" alt="flower-logo">
+                    <img src="./assets/main/001-plant 4.svg" alt="flower-logo">
+                </div>
             </div>
-        </header>
-        <div class="main">
-            <h1 class="main__text">Let’s find<br>your love<br><span>plants.</span></h1>
-            <p class="main__p">Add some color to your home, give it a<br>little attention, the plants will<br>accompany you quietly</p>
-            <button class="main__watch"><a href="#">WATCH THE VIDEO</a></button>
-            <div class="main__logos">
-                <img src="./assets/main/001-plant 1.svg" alt="flower-logo">
-                <img src="./assets/main/001-plant 2.svg" alt="flower-logo">
-                <img src="./assets/main/001-plant 3.svg" alt="flower-logo">
-                <img src="./assets/main/001-plant 4.svg" alt="flower-logo">
+        </section>
+        <section class="hero">
+            <div class="text">
+                <button class="hero__button"><a href="#">Try for service</a></button>
+                <p class="hero__beautiful">GET A BEAUTIFUL HOME</p>
+                <p class="hero__p">If you don’t know what plants you can add to the space<br>
+                    We can provide you with selected plants<br>
+                    And configure your space</p>
             </div>
-        </div>
-    </section>
+            <div class="plants">
+                <h1 class="plants__text">4 types of plants</h1>
+                <div class="photos">
+                    <img src="./assets/plants/Card.png" alt="card">
+                    <img src="./assets/plants/Card (1).png" alt="card">
+                    <img src="./assets/plants/Card (2).png" alt="card">
+                    <img src="./assets/plants/Card (3).png" alt="card">
+                </div>
+            </div>
+        </section>
+        <div id="main-page"></div>
+    </div>
+    <!-- <script src="routes.js"></script> -->
+     <script src="main.js"></script>
 </body>
 
 </html>

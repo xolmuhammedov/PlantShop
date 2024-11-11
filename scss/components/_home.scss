@@ -3,19 +3,18 @@
     width: 100%;
     overflow: hidden;
     position: relative;
-    background-color: red;
     padding-bottom: 500px;
     background: url('../../assets/home/dizayn.png') no-repeat center center/cover;
-
     header {
         nav {
-            padding-top: 10%;
+            cursor: pointer;
+            padding-top: 8%;
             display: flex;
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 10vh;
-
+            height: 11vh;
+            position: relative; // Add this
             ul {
                 display: flex;
                 align-items: center;
@@ -32,9 +31,14 @@
                         font-family: sans-serif;
                         font-weight: 600;
                     }
+                    a:hover{
+                        color: #B7EAAF;
+                        transition: 0.5s all ease-in;
+                    }
                 }
 
                 button {
+                    cursor: pointer;
                     width: 110px;
                     height: 30px;
                     border-radius: 10px;
@@ -45,6 +49,7 @@
                     background-color: #B7EAAF;
                     outline: none;
                     border: none;
+                    text-decoration: none;
                 }
             }
         }
@@ -98,7 +103,136 @@
             justify-content: space-between;
             width: 28%;
         }
-
         padding-bottom: 0%;
+    }
+}
+
+
+// Add these media queries to _home.scss
+.home {
+    // Existing styles...
+
+    @media screen and (max-width: 768px) {
+        max-height: auto;
+        padding-bottom: 50px;
+
+        header nav {
+            padding-top: 4%;
+            height: auto;
+
+            ul {
+                flex-direction: column;
+                gap: 20px;
+                
+                li a {
+                    font-size: 14px;
+                }
+
+                button {
+                    width: 100px;
+                    height: 28px;
+                    font-size: 13px;
+                }
+            }
+        }
+
+        .main {
+            .main__text {
+                font-size: 32px;
+                margin-top: 15%;
+            }
+
+            .main__p {
+                font-size: 16px;
+                line-height: 24px;
+                padding: 0 20px;
+            }
+
+            .main__logos {
+                width: 90%;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+        }
+    }
+}
+
+// Add to _home.scss
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav ul {
+        display: none;
+        &.show {
+            display: flex;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .home header nav ul {
+        display: none; // Hidden by default
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(55, 87, 57, 0.9); // Semi-transparent background
+        padding: 20px;
+        transform: translateY(-20px);
+        opacity: 0;
+        transition: all 0.3s ease;
+        
+        &.show {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        li {
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+        }
+    }
+}
+
+// Add to _home.scss
+.menu-toggle {
+    display: none; // Hide by default
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    @media screen and (max-width: 768px) {
+        display: block; // Only show on mobile
+    }
+}
+
+.home header nav {
+    position: relative;
+
+    @media screen and (max-width: 768px) {
+        .menu-toggle {
+            z-index: 101; // Ensure it's above the menu
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
     }
 }
